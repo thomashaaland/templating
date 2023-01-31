@@ -1,7 +1,7 @@
 {{template "top" .}}
-<h1>hello world</h1>
+<h1>{{.Title}}</h1>
 
-<p>This is a description</p>
+<p>{{.Description}}</p>
 
-Tags: <ul><li>go</li><li>tdd</li></ul>
+Tags: <ul>{{range .Tags}}<li>{{.}}</li>{{end}}</ul>
 {{template "bottom" .}}
